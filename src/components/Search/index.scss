@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.search{
+  background-color: black;
+
+  &-wrapper{
+    height: 740px;
+    margin: 0 0;
+    background: url("../../assets/q2.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after{
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,.5);
+      z-index: 2;
+
+    }
+  }
+  &-text{
+    padding: 0 200px;
+  }
+  &-title{
+    z-index: 3;
+    position: relative;
+    text-align: center;
+    font-size: 48px;
+  }
+  &-desc{
+    color: white;
+    z-index: 3;
+    position: relative;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 32px;
+    max-width: 1000px;
+  }
+
+  &-icon{
+  }
+
+  &-form{
+    position: relative;
+  }
+
+}

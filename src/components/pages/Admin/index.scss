@@ -1,0 +1,21 @@
+@import '../../../styles/variables';
+
+.admin{
+
+  &-wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  &-form{
+    display: flex;
+    flex-direction: column;
+  }
+  &-input{
+    border: 1px solid #ccc;
+    padding: 6px;
+    margin: 8px;
+  }
+  &-select{
+    margin: 8px;
+  }
+}

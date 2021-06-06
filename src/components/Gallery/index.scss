@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+.gallery{
+  background-color: whitesmoke;
+  padding-bottom: 60px;
+  padding-top: 40px;
+
+  &-wrapper{
+
+  }
+  &-title{
+    text-align: center;
+    font-size: 32px;
+    color: $blue;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $black;
+    padding: 40px 0;
+  }
+  &-block{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    row-gap: 50px;
+
+  }
+}

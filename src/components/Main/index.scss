@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+
+.mainx{
+
+  &-info{
+    &-wrapper{
+
+    }
+    &-banner{
+      background: url("../../assets/ph1.jpg") center no-repeat;
+      background-size: cover;
+      height: 300px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .5);
+        z-index: 2;
+      }
+    }
+    &-title{
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 36px;
+      //color: $blue;
+      position: relative;
+      z-index: 3;
+
+    }
+    &-text{
+      text-align: center;
+      font-size: 26px;
+      color: white;
+      position: relative;
+      z-index: 3;
+    }
+    &-sp{
+      color: white;
+    }
+  }
+
+}

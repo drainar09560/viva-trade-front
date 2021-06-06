@@ -1,0 +1,84 @@
+{
+  "purchases": [
+    {
+      "id": 1,
+      "status": true,
+      "eis": 3464764567,
+      "name": "PurchaseName",
+      "client": "ClientName",
+      "price": 250000,
+      "startDate": "2020.04.11",
+      "rule": "44-ФЗ Запрос котировок в электронной форме"
+    },
+    {
+      "id": 2,
+      "status": true,
+      "eis": 2,
+      "name": "PurchaseName",
+      "client": "ClientName",
+      "price": 1000000,
+      "startDate": "2020.04.11",
+      "rule": "44-ФЗ Запрос котировок в электронной форме"
+    },
+    {
+      "id": 3,
+      "status": true,
+      "eis": 3,
+      "name": "PurchaseName",
+      "client": "ClientName",
+      "price": 100000,
+      "startDate": "2020.04.11",
+      "rule": "44-ФЗ Запрос котировок в электронной форме"
+    },
+    {
+      "id": 4,
+      "status": true,
+      "eis": 4,
+      "name": "PurchaseName",
+      "client": "ClientName",
+      "price": 320450,
+      "startDate": "2020.04.11",
+      "rule": "44-ФЗ Запрос котировок в электронной форме"
+    },
+    {
+      "id": 4,
+      "status": true,
+      "eis": 4532467,
+      "name": "PurchaseName",
+      "client": "ClientName",
+      "price": 250000,
+      "startDate": "2020.04.11",
+      "rule": "44-ФЗ Запрос котировок в электронной форме"
+    }
+  ],
+  "admins": [
+    {
+      "login": "admin",
+      "password": "2295"
+    }
+  ],
+  "users": [
+    {
+      "login": "user",
+      "password": "2295",
+      "name": "Eugeney",
+      "surname": "Litvyak",
+      "middlename": "Vyacheslavovich",
+      "email": "user@yandex.ru"
+    },
+    {
+      "login": "alex56ru",
+      "password": "55434rfQc",
+      "name": "Сергей",
+      "surname": "Андреев",
+      "middlename": "Петрович",
+      "email": "andreeav@yandex.ru",
+      "number": 78384539088
+    }
+  ]
+
+
+}
+
+
+

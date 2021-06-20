@@ -1,7 +1,7 @@
 import './index.scss'
 import back from '../../assets/q1.jpeg'
 
-function Search() {
+function MainScreen() {
 
     return (
         <div className="search">
@@ -15,4 +15,4 @@ function Search() {
     )
 }
 
-export default Search
+export default MainScreen

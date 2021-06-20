@@ -2,6 +2,7 @@
 
 .services{
   color: $black;
+
   &-wrapper{
     padding: 60px 0;
 
@@ -40,6 +41,8 @@
   &-number{
     position: relative;
     color: $blue;
+    font-weight: bold;
+
 
     &:after {
       content: '';
@@ -70,5 +73,6 @@
     margin-bottom: 60px;
     border-bottom: 1px solid $black;
     padding-bottom: 40px;
+
   }
 }

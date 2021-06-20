@@ -1,22 +1,38 @@
 import React from 'react';
 import './index.scss'
+import Header from '../../Header/Header'
+import logo from "../../../assets/ph.png";
+import { Link, Route, Switch } from 'react-router-dom'
+import Service from "./components/Services/Service";
 
 function Admin() {
 
     return(
         <div className="admin">
-            <div className="admin-wrapper">
-                <form action="" className="admin-form">
-                    <input type="text" className="admin-input" placeholder="Название закупки"/>
-                    <input type="text" className="admin-input" placeholder="Заказчик"/>
-                    <input type="text" className="admin-input" placeholder="Номер ЕИС"/>
-                    <input type="text" className="admin-input" placeholder="Начальная цена"/>
-                    <input type="date" className="admin-input" placeholder="Дата размещения"/>
-                    <select name="" id="" className="admin-select" ></select>
-                    <button>Сохранить</button>
-                </form>
+            <div className="admin-header">
+                <div className="header-middle">
+                    <div className="header-middle-wrapper container">
+                        <img src={logo} alt="" className="header-logo"/>
+                        <h1>Вива-Метал : Панель администратора</h1>
+                    </div>
+                </div>
             </div>
+            <ul className="admin-nav">
+                    <li className="admin-nav-item">
+                        <Link to='/adminpanel/services'>Услуги</Link>
+                    </li>
+                    <li className="admin-nav-item">
+
+                    </li>
+            </ul>
+            <div className="admin-wrapper">
+                <Switch>
+                    <Route path='/adminpanel/services' component={Service}/>
+                </Switch>
+            </div>
+
         </div>
+
     )
 }
 

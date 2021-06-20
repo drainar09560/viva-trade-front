@@ -5,6 +5,34 @@
   &-wrapper{
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 60px;
+    padding-top: 40px;
+  }
+  &-nav{
+    display: flex;
+    align-items: center;
+    background-color: $blue;
+    width: 100%;
+
+    &-item{
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      padding: 10px 5px;
+      cursor: pointer;
+
+      &:nth-child(odd){
+        border-right: 1px solid $gray;
+      }
+      &:hover{
+        background-color: #336790;
+      }
+
+    }
   }
   &-form{
     display: flex;
@@ -17,5 +45,12 @@
   }
   &-select{
     margin: 8px;
+  }
+  &-button{
+    width: 240px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: $blue;
   }
 }

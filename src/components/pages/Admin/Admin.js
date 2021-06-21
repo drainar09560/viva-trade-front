@@ -5,6 +5,7 @@ import Header from '../../Header/Header'
 import { Link, Route, Switch } from 'react-router-dom'
 import Service from "./components/Services/Service";
 import logo from '../../../assets/logoV.jpg'
+import Gallery from "./components/Gallery/Gallery";
 
 function Admin() {
 
@@ -23,12 +24,13 @@ function Admin() {
                         <Link to='/adminpanel/services'>Услуги</Link>
                     </li>
                     <li className="admin-nav-item">
-
+                        <Link to='/adminpanel/gallery'>Галерея</Link>
                     </li>
             </ul>
             <div className="admin-wrapper">
                 <Switch>
                     <Route path='/adminpanel/services' component={Service}/>
+                    <Route path='/adminpanel/gallery' components={Gallery}/>
                 </Switch>
             </div>
 

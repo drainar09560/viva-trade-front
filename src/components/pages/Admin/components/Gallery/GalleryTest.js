@@ -1,18 +1,18 @@
 import React from 'react';
-import {Context} from "../../../../index";
-import TestServiceInput from "./TestServiceInput";
-import ModalAddService from "../components/Services/Modals/ModalAddService";
+import {Context} from "../../../../../index";
+import TestGalleryInput from "./TestGalleryInput";
+import ModalAddGallery from "./Modals/ModalAddGallery";
 
 const Test = () => {
-    const [service, setService] = React.useState([])
+    const [gallery, setGallery] = React.useState([])
     const {firebase} = React.useContext(Context)
     const [loading, setLoading] = React.useState(false)
 
     const fetchData = async () => {
         setLoading(true)
         const db = firebase.firestore()
-        const data = await db.collection('Service').get()
-        setService(data.docs.map(doc => ({...doc.data(), id: doc.id})))
+        const data = await db.collection('Gallery').get()
+        setGallery(data.docs.map(doc => ({...doc.data(), id: doc.id})))
         setLoading(false)
     }
     React.useEffect(() => {
@@ -21,16 +21,16 @@ const Test = () => {
 
     return (
         <div>
-            <ModalAddService fetchData={fetchData}/>
+            <ModalAddGallery fetchData={fetchData}/>
             {loading ? <h1>Загрузка...</h1> : null}
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr 1fr',
                 gap: '30px',
             }}>
-                {service.map((elem, index) => (
+                {gallery.map((elem, index) => (
                         <div key={elem.text}>
-                            <TestServiceInput fetchData={fetchData} index={index} service={elem}/>
+                            <TestGalleryInput fetchData={fetchData} index={index} gallery={elem}/>
                         </div>
                     )
                 )

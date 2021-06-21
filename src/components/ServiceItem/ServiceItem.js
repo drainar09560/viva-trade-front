@@ -1,17 +1,18 @@
 import './index.scss'
 
-function ServiceItem(props) {
+function ServiceItem(service, fetchData, index) {
+
 
     return(
-        <div className="service-item">
+        <div className="service-item" key={service.id}>
             <div className="service-item-wrapper">
-                <div className="service-item-photo">
+                <div className="service-item-photo" style={{backgroundImage:`url(${service.service.src})`}}>
                     <div className="service-item-desc">
                         <h1 className="service-item-title">
-                            {props.title}
+                            {service.service.title}
                         </h1>
                         <p className="service-item-text">
-                            {props.text}
+                            {service.service.description}
                         </p>
                     </div>
                 </div>

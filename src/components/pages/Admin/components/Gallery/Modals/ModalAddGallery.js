@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from "../../../Modal/Modal";
 import {Context} from "../../../../../../index";
 
-const ModalAddService = ({fetchData}) => {
+const ModalAddGallery = ({fetchData}) => {
     const {firestore,storage} = React.useContext(Context)
 
     const [ modalActive, setModalActive ] = React.useState(false)
@@ -12,7 +12,7 @@ const ModalAddService = ({fetchData}) => {
     const [ url, setUrl ] = React.useState('')
     const [ error, setError ] = React.useState('')
 
-    const [ title, setTitle ] = React.useState('')
+    // const [ title, setTitle ] = React.useState('')
     const [ description, setDescription ] = React.useState('')
 
     const downloadFile = e => {
@@ -27,7 +27,7 @@ const ModalAddService = ({fetchData}) => {
 
     const handleUpload = async () => {
         try {
-            const uploadTask = storage.ref(`service/${image.name}`).put(image);
+            const uploadTask = storage.ref(`gallery/${image.name}`).put(image);
             uploadTask.on(
                 "state_changed",
                 snapshot => {
@@ -41,7 +41,7 @@ const ModalAddService = ({fetchData}) => {
                 },
                 () => {
                     storage
-                        .ref('service')
+                        .ref('gallery')
                         .child(image.name)
                         .getDownloadURL()
                         .then(url => {
@@ -54,15 +54,15 @@ const ModalAddService = ({fetchData}) => {
         }
     }
 
-    const createServise = async () => {
+    const createGallery = async () => {
         if( image !== null) {
             try{
-                firestore.collection('Service').add({
-                    title: title,
+                firestore.collection('Gallery').add({
+                    // title: title,
                     description: description,
                     src: url
                 })
-                setTitle('')
+                // setTitle('')
                 setDescription('')
                 fetchData()
             }catch(e){
@@ -93,13 +93,13 @@ const ModalAddService = ({fetchData}) => {
 
                 </div>
                 <div style={{display:'flex', flexDirection: 'column'}}>
-                    <input type="text" placeholder="Заголовок" value={title} onChange={e => setTitle(e.target.value)} style={{ border: '1px solid #dcdcdc', height: '30px', fontSize: '18px', padding: '8px', marginBottom: '14px'}} />
+                    {/*<input type="text" placeholder="Заголовок" value={title} onChange={e => setTitle(e.target.value)} style={{ border: '1px solid #dcdcdc', height: '30px', fontSize: '18px', padding: '8px', marginBottom: '14px'}} />*/}
                     <textarea type="text" placeholder="Описание" value={description} onChange={e => setDescription(e.target.value)} style={{ border: '1px solid #dcdcdc', resize:'none', height:'280px', fontSize: '18px', padding: '8px', marginBottom: '14px'}}/>
-                    <button onClick={createServise} style={{backgroundColor: '#0c538c', color: 'white', fontSize: '18px', padding: '8px', width: '50%', margin: '0 auto'}}>Добавить данные</button>
+                    <button onClick={createGallery} style={{backgroundColor: '#0c538c', color: 'white', fontSize: '18px', padding: '8px', width: '50%', margin: '0 auto'}}>Добавить</button>
                 </div>
             </Modal>
         </div>
     );
 };
 
-export default ModalAddService;
+export default ModalAddGallery;

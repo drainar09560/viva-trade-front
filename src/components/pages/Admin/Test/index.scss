@@ -1,0 +1,18 @@
+.servBtn{
+
+  &:hover{
+
+    background-color: #f8f8f8;
+    transition: all 0.5s ease;
+  }
+}
+
+.redBtn{
+
+  &:hover{
+
+    background-color: #ec1010;
+    color: white;
+    transition: all 0.5s ease;
+  }
+}

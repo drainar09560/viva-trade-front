@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from "../../../Modal/Modal";
 import {Context} from "../../../../../../index";
 
-const ModalAddService = () => {
+const ModalAddService = ({fetchData}) => {
     const {firestore,storage} = React.useContext(Context)
 
     const [ modalActive, setModalActive ] = React.useState(false)
@@ -63,6 +63,8 @@ const ModalAddService = () => {
                     src: url
                 })
                 setTitle('')
+                setDescription('')
+                fetchData()
             }catch(e){
                 alert(e)
             }
@@ -71,18 +73,30 @@ const ModalAddService = () => {
         }
     }
     return (
-        <div>
+        <div style={{position: 'fixed', left: 60}}>
             <button onClick={() => {
                 setModalActive(!modalActive)
-            }}>Добавить данные</button>
+            }} style={{width: '240px', height: '50px', backgroundColor: '#0c538c', color: 'white',  overflow: 'hidden', borderRadius: '8px', fontSize: '18px'}}>Добавить данные</button>
             <Modal active={modalActive} setActive={setModalActive}>
-                <h1>Добавить данные в сервис</h1>
-                <input type="text" placeholder="Описание" value={title} onChange={e => setTitle(e.target.value)}/>
-                <progress value={progress} max='100'/>
-                <input onChange={downloadFile} type="file"/>
-                <button onClick={handleUpload}>Отправить фото</button>
-                <p>{error}</p>
-                <button onClick={createServise}>Добавить данные</button>
+                <h1 style={{textAlign: 'center', marginBottom:'20px'}}>Добавить данные в сервис</h1>
+                <div>
+                    <progress value={progress} max='100' style={{width: '100%'}}/>
+                    <div style={{display: 'flex', padding: '20px'}}>
+                        <div style={{flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                            <input onChange={downloadFile} type="file"/>
+                        </div>
+                        <div style={{flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                            <button onClick={handleUpload} style={{backgroundColor: '#0c538c', color: 'white', fontSize: '16px', padding: '8px'}}>Отправить фото</button>
+                        </div>
+                        <p>{error}</p>
+                    </div>
+
+                </div>
+                <div style={{display:'flex', flexDirection: 'column'}}>
+                    <input type="text" placeholder="Заголовок" value={title} onChange={e => setTitle(e.target.value)} style={{ border: '1px solid #dcdcdc', height: '30px', fontSize: '18px', padding: '8px', marginBottom: '14px'}} />
+                    <textarea type="text" placeholder="Описание" value={description} onChange={e => setDescription(e.target.value)} style={{ border: '1px solid #dcdcdc', resize:'none', height:'280px', fontSize: '18px', padding: '8px', marginBottom: '14px'}}/>
+                    <button onClick={createServise} style={{backgroundColor: '#0c538c', color: 'white', fontSize: '18px', padding: '8px', width: '50%', margin: '0 auto'}}>Добавить данные</button>
+                </div>
             </Modal>
         </div>
     );

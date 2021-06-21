@@ -1,7 +1,8 @@
 import React from 'react';
 import './index.scss'
 import PhoneItem from '../PhoneItem/PhoneItem'
-import logo from '../../assets/ph.png'
+// import logo from '../../assets/ph.png'
+import logo from '../../assets/logoV.jpg'
 import signup from '../../assets/signup.svg'
 import signin from '../../assets/signin.svg'
 

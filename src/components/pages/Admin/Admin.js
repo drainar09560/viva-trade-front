@@ -1,9 +1,10 @@
 import React from 'react';
 import './index.scss'
 import Header from '../../Header/Header'
-import logo from "../../../assets/ph.png";
+// import logo from "../../../assets/ph.png";
 import { Link, Route, Switch } from 'react-router-dom'
 import Service from "./components/Services/Service";
+import logo from '../../../assets/logoV.jpg'
 
 function Admin() {
 
@@ -11,8 +12,8 @@ function Admin() {
         <div className="admin">
             <div className="admin-header">
                 <div className="header-middle">
-                    <div className="header-middle-wrapper container">
-                        <img src={logo} alt="" className="header-logo"/>
+                    <div className="header-middle-wrapper container" style={{padding: '20px 0'}}>
+                        <img src={logo} alt="" className="header-logo" style={{width: '240px', height: '160px'}}/>
                         <h1>Вива-Метал : Панель администратора</h1>
                     </div>
                 </div>

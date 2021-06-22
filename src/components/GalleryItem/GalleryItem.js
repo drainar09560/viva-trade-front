@@ -1,15 +1,17 @@
 import './index.scss'
 
-function GalleryItem(props) {
+function GalleryItem(gallery) {
+
+    console.log(123)
 
     return(
-        <div className="galleryItem">
+        <div className="galleryItem" key={gallery.id}>
             <div className="galleryItem-wrapper">
-                <div className="galleryItem-pic">
+                <div className="galleryItem-pic" style={{backgroundImage:`url(${gallery.gallery.src})`}}>
 
                 </div>
                 <div className="galleryItem-desc">
-                    <p className="galleryItem-desc-text">Длинный забор из профнастила</p>
+                    <p className="galleryItem-desc-text">{gallery.gallery.description}</p>
                 </div>
             </div>
         </div>

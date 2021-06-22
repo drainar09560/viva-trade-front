@@ -25,7 +25,7 @@ const TestGalleryInput = ({gallery, fetchData}) => {
             <textarea
                 style={{
                     width: '100%',
-                    height: '300px',
+                    height: '150px',
                     border: '1px solid #F5F5F5',
                     resize: 'none',
                     marginTop:'20px',

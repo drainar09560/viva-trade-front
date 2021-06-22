@@ -30,7 +30,7 @@ function Admin() {
             <div className="admin-wrapper">
                 <Switch>
                     <Route path='/adminpanel/services' component={Service}/>
-                    <Route path='/adminpanel/gallery' components={Gallery}/>
+                    <Route path='/adminpanel/gallery' component={Gallery}/>
                 </Switch>
             </div>
 

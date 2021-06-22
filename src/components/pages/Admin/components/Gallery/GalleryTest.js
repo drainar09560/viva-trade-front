@@ -25,7 +25,7 @@ const Test = () => {
             {loading ? <h1>Загрузка...</h1> : null}
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: '1fr 1fr 1fr',
+                gridTemplateColumns: '1fr 1fr 1fr 1fr',
                 gap: '30px',
             }}>
                 {gallery.map((elem, index) => (

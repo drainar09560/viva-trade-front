@@ -3,9 +3,9 @@ import './index.scss'
 import Header from '../../Header/Header'
 // import logo from "../../../assets/ph.png";
 import { Link, Route, Switch } from 'react-router-dom'
-import Service from "./components/Services/Service";
+import Service from "./components/Services/Service"
 import logo from '../../../assets/logoV.jpg'
-import Gallery from "./components/Gallery/Gallery";
+import Gallery from "./components/Gallery/Gallery"
 
 function Admin() {
 

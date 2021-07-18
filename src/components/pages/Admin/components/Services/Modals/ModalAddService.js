@@ -73,10 +73,10 @@ const ModalAddService = ({fetchData}) => {
         }
     }
     return (
-        <div style={{position: 'fixed', left: 60}}>
+        <div style={{position: 'fixed', left: 25}}>
             <button onClick={() => {
                 setModalActive(!modalActive)
-            }} style={{width: '240px', height: '50px', backgroundColor: '#0c538c', color: 'white',  overflow: 'hidden', borderRadius: '8px', fontSize: '18px'}}>Добавить</button>
+            }} style={{width: '200px', height: '50px', backgroundColor: '#0c538c', color: 'white',  overflow: 'hidden', borderRadius: '8px', fontSize: '18px'}}>Добавить</button>
             <Modal active={modalActive} setActive={setModalActive}>
                 <h1 style={{textAlign: 'center', marginBottom:'20px'}}>Добавить данные в сервис</h1>
                 <div>

@@ -21,10 +21,10 @@ function Admin() {
             </div>
             <ul className="admin-nav">
                     <li className="admin-nav-item">
-                        <Link to='/adminpanel/services'>Услуги</Link>
+                        <Link to='/adminpanel/services' style={{color: 'white'}}>Услуги</Link>
                     </li>
                     <li className="admin-nav-item">
-                        <Link to='/adminpanel/gallery'>Галерея</Link>
+                        <Link to='/adminpanel/gallery' style={{color: 'white'}}>Галерея</Link>
                     </li>
             </ul>
             <div className="admin-wrapper">

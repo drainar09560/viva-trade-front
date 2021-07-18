@@ -3,7 +3,7 @@ import {Context} from "../../../../index";
 import TestServiceInput from "./TestServiceInput";
 import ModalAddService from "../components/Services/Modals/ModalAddService";
 
-const Test = () => {
+const TestService = () => {
     const [service, setService] = React.useState([])
     const {firebase} = React.useContext(Context)
     const [loading, setLoading] = React.useState(false)
@@ -40,4 +40,4 @@ const Test = () => {
     );
 };
 
-export default Test;
+export default TestService;
